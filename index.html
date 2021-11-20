@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="icon.jpg" sizes="16x16" type="image/icon type">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+    <link rel="shortcut icon" href="logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Card</title>
+</head>
+
+<body>
+    <div class="animate__animated animate__zoomIn">
+        <article class="gradient">
+            <div class="circle">
+                <div class="logo"></div>
+                <div class="text">
+                    <p>Naveen Das -Web Designer & Developer - </p>
+                </div>
+            </div>
+
+            <div class="div2">
+                <h3>A Psycho Coder.</h3>
+                <p><b>Skills</b></p>
+                <div>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>C++</span>
+                </div>
+            </div>
+
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+
+            <div class="div3">
+                <a href="#" target="_blank">Follow</a>
+            </div>
+        </article>
+    </div>
+</body>
+
+<script>
+    const text = document.querySelector('.text p');
+    text.innerHTML = text.innerText.split("").map(
+        (char, i) =>
+            `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
+    ).join("")
+</script>
+
+</html>

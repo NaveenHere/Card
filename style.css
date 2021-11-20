@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+body {
+    background-color: black;
+}
+
+.circle {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url("https://blob.sololearn.com/avatars/83d485ea-099e-4098-b3cf-50ed736d84a3.jpg");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotation 10s linear infinite;
+    font-weight: 900;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.text span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2rem;
+    transform-origin: 0 100px;
+}
+
+/* Card Section */
+
+article {
+    color: black;
+    max-width: 300px;
+    padding-top: 2%;
+    margin: 80px auto;
+    border-radius: 10px;
+    background: #e0e0e0;
+    animation: shadow 5s linear infinite;
+}
+
+@keyframes shadow {
+    0%, 100% {
+        box-shadow: 0px 0px 50px #c22085;
+    }
+    50% {
+        box-shadow: 0px 0px 50px #2d9687;
+    }
+    75% {
+        box-shadow: 0px 0px 50px #e9b171;
+    }
+}
+
+.gradient {
+    --borderWidth: 6px;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+
+.gradient:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animate 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Skills Section */
+
+.div2 {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.div2 p {
+    color: teal;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.div2 span {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.div2 h3{
+    padding: 2%;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 4% 0;
+}
+.icon i:hover{
+    color: #07b39b;
+    transform: scale(1.2);
+}
+
+/* Follow Button */
+
+.div3 a {
+    text-align: center;
+    padding: 5%;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    outline: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: textcolor 4s linear infinite;
+}
+
+@keyframes textcolor {
+    0%, 100% {
+        background-color: #c22085;
+    }
+    50% {
+        background-color: #2d9687;
+    }
+    75% {
+        background-color: #e9b171;
+    }
+}
+
+.span>i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8% 45%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 50px;
+}
